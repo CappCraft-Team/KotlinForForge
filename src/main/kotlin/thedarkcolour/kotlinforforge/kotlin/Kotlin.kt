@@ -1,3 +1,5 @@
+@file:Suppress("NOTHING_TO_INLINE", "unused")
+
 package thedarkcolour.kotlinforforge.kotlin
 
 import java.util.*
@@ -80,6 +82,6 @@ public inline fun <E : Enum<E>> enumSetOf(e1: E, e2: E, e3: E, e4: E, e5: E): En
  * number of elements, but it is likely to run slower than the overloads
  * that do not use varargs.
  */
-public inline fun <E : Enum<E>> enumSetOf(first: E, vararg rest: E): EnumSet<E> {
+public fun <E : Enum<E>> enumSetOf(first: E, vararg rest: E): EnumSet<E> {
     return EnumSet.of(first, *rest)
 }
